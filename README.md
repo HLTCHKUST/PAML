@@ -34,13 +34,13 @@ The difference between finetuning from a) joint training on all personas and b) 
 <img src="plot/inter.jpg" width="50%" />
 </p>
 
-Iteration of finetuning versus consistency. Consistency ofPAMLgrowslinearly with respect to the iteration.
+Iteration of finetuning versus consistency. Consistency of PAML grows linearly with respect to the iteration.
 
 <p align="center">
 <img src="plot/kshot.jpg" width="50%" />
 </p>
 
-K-shot results for different settings. Consistency of PAML grows linearly with respect to k.
+K-shot results for different settings. Consistency of PAML grows linearly with respect to finetune dialogue number.
 
 ## Dependency
 Check the packages needed or simply run the command
