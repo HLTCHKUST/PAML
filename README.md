@@ -47,8 +47,9 @@ Check the packages needed or simply run the command
 ```console
 ❱❱❱ pip install -r requirements.txt
 ```
-[**Pre-trained glove embedding**](http://nlp.stanford.edu/data/glove.6B.zip), put ***glove.6B.300d.txt*** inside folder /vectors/.
-[**Trained NLI model**](https://drive.google.com/file/d/1Qawz1pMcV0aGLVYzOgpHPgG5vLSKPOJ1/view?usp=sharing) discribed in paper 3.1, put ***pytorch_model.bin*** inside folder /data/nli_model/.
+[**Pre-trained glove embedding**](http://nlp.stanford.edu/data/glove.6B.zip): ***glove.6B.300d.txt*** inside folder /vectors/.
+
+[**Trained NLI model**](https://drive.google.com/file/d/1Qawz1pMcV0aGLVYzOgpHPgG5vLSKPOJ1/view?usp=sharing) discribed in paper 3.1: ***pytorch_model.bin*** inside folder /data/nli_model/.
 ## Experiment
 Training PAML
 ```console
