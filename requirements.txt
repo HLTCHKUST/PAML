@@ -1,0 +1,4 @@
+torch==0.4.1
+tqdm==4.32.1
+tensorboardX==1.6
+pytorch-pretrained-bert
