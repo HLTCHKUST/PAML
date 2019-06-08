@@ -40,7 +40,7 @@ Iteration of finetuning versus consistency. Consistency of PAML grows linearly w
 <img src="plot/kshot.jpg" width="50%" />
 </p>
 
-K-shot results for different settings. Consistency of PAML grows linearly with respect to finetune dialogue number.
+K-shot (10 iteration) results for different settings. Consistency of PAML grows linearly with respect to finetune dialogue number.
 
 ## Dependency
 Check the packages needed or simply run the command
@@ -78,3 +78,6 @@ Finetune and Testing baseline with persona input
 ```console
 ❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --persona --save_path save/persona/${model} --save_path_dataset save/persona/
 ```
+
+K-shot
+add flag --k_shot k(k=1,3,5,7,10) at finetune stage to run the k shot experiment
