@@ -24,20 +24,20 @@ Existing personalized dialogue models use human designed persona descriptions to
 ## Persona-agnostic meta-learning
 
 <p align="center">
-<pdf src="plot/Maml_figure.pdf" width="40%" />
+<img src="plot/Maml_figure.jpg" width="30%" />
 </p>
 The difference between finetuning from a) joint training on all personas and b) meta-learning persona. The solid line represents the optimization path of the initial parameters and dashed line the fine-tuning path. Meta-learned initial parameters can faster adapt to a new persona.
 
 ## Consistency improvement
 
 <p align="center">
-<pdf src="plot/inter.pdf" width="40%" />
+<img src="plot/inter.jpg" width="40%" />
 </p>
 
 Iteration of finetuning versus consistency. Consistency ofPAMLgrowslinearly with respect to the iteration.
 
 <p align="center">
-<pdf src="plot/kshot.pdf" width="40%" />
+<img src="plot/kshot.jpg" width="40%" />
 </p>
 
 K-shot results for different settings. Consistency of PAML grows linearly with respect to k.
