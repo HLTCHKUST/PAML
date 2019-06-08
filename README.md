@@ -5,6 +5,7 @@
 
 This is the PyTorch implementation of the paper:
 **Personalizing Dialogue Agents via Meta-Learning**. Zhaojiang Lin*, Andrea Madotto*, Chien-Sheng Wu, Pascale Fung  ***ACL 2019*** [[PDF]](https://arxiv.org/pdf/1905.10033.pdf)
+
 [**Zhaojiang Lin**](https://github.com/zlinao) and [**Andrea Madotto**](https://andreamad8.github.io/)  contributed equally to this work. 
 
 This code has been written using PyTorch >= 0.4.1. If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex is listed below:
@@ -23,20 +24,20 @@ Existing personalized dialogue models use human designed persona descriptions to
 ## Persona-agnostic meta-learning
 
 <p align="center">
-<img src="plot/Maml_figure.pdf" width="75%" />
+<pdf src="plot/Maml_figure.pdf" width="40%" />
 </p>
 The difference between finetuning from a) joint training on all personas and b) meta-learning persona. The solid line represents the optimization path of the initial parameters and dashed line the fine-tuning path. Meta-learned initial parameters can faster adapt to a new persona.
 
 ## Consistency improvement
 
 <p align="center">
-<img src="plot/inter.pdf" width="50%" />
+<pdf src="plot/inter.pdf" width="40%" />
 </p>
 
 Iteration of finetuning versus consistency. Consistency ofPAMLgrowslinearly with respect to the iteration.
 
 <p align="center">
-<img src="plot/kshot.pdf" width="50%" />
+<pdf src="plot/kshot.pdf" width="40%" />
 </p>
 
 K-shot results for different settings. Consistency of PAML grows linearly with respect to k.
