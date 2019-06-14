@@ -68,15 +68,15 @@ After training, take the model with lowest PPL in validation set to finetune and
 
 Finetune and Testing PAML
 ```console
-❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
+❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
 ```
 Finetune and Testing baseline without persona input
 ```console
-❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/no_persona/${model} --save_path_dataset save/no_persona/ --test
+❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/no_persona/${model} --save_path_dataset save/no_persona/ --test
 ```
 Finetune and Testing baseline with persona input
 ```console
-❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --persona --save_path save/persona/${model} --save_path_dataset save/persona/
+❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --persona --save_path save/persona/${model} --save_path_dataset save/persona/
 ```
 
 K-shot
