@@ -342,13 +342,13 @@ def prepare_data_seq():
     valid = filter_data(cluster_persona(valid,'valid'),cut=1)
     test = filter_data(cluster_persona(test,'test'),cut=1)
     print("Vocab_size %s " % vocab.n_words)
-    '''
+    
     if not os.path.exists(config.save_path):
         os.makedirs(config.save_path)
     with open(config.save_path+'dataset.p', "wb") as f:
         pickle.dump([train,valid,test,vocab], f)
         print("Saved PICKLE")
-    '''
+    
     return train, valid, test, vocab
 
 def get_persona(data):
