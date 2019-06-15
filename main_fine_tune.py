@@ -27,7 +27,7 @@ def do_learning(model, train_iter, val_iter, iterations):
         for j, d in enumerate(train_iter):
             _, _, _ = model.train_one_batch(d)
         if(i in [1,3,5,7,10]):#1,3,5,7,
-            loss, ppl_val, ent_b, bleu_score_b = evaluate(model, val_iter, model_name=config.model,ty="test",verbose=(True if i==10 else False))
+            loss, ppl_val, ent_b, bleu_score_b = evaluate(model, val_iter, model_name=config.model,ty="test",verbose=(True if i>0 else False))
             logger[str(i)] = [loss, ppl_val, ent_b, bleu_score_b]
     return logger
 
