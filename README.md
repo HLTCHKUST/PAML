@@ -81,3 +81,6 @@ Finetune and Testing baseline with persona input
 
 K-shot
 add flag --k_shot k(k=1,3,5,7,10) at finetune stage to run the k shot experiment
+
+Note:
+the generation with batch size one will be less repetitive but take more time to evaluate
