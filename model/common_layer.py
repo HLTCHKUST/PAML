@@ -637,7 +637,8 @@ def evaluate(model, data, model_name='trs', ty='valid', writer=None, n_iter=0, t
                 for w in sent_b[i][0]:
                     if w==config.EOS_idx:
                         break
-                    new_words.append(w)
+                    if not (new_words[-1]==w):
+                        new_words.append(w)
                 
                 sent_beam_search = ' '.join([model.vocab.index2word[idx] for idx in new_words])
                 hyp_b.append(sent_beam_search)
