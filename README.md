@@ -90,3 +90,4 @@ To check generation of PAML:
 ```console
 ❱❱❱ python generate_samples.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
 ```
+To skip training and finetune, check generation here: ***paml_generation***
