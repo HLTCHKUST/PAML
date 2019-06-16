@@ -51,7 +51,9 @@ Check the packages needed or simply run the command
 
 [**Trained NLI model**](https://drive.google.com/file/d/1Qawz1pMcV0aGLVYzOgpHPgG5vLSKPOJ1/view?usp=sharing) discribed in paper 3.1: ***pytorch_model.bin*** inside folder /data/nli_model/.
 ## Experiment
+
 ***Training***
+
 Training PAML
 ```console
 ❱❱❱ python MAML.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --fix_dialnum_train --pointer_gen --save_path save/paml/
@@ -66,7 +68,9 @@ Training baseline with persona input
 ```
 
 After training, take the model with lowest PPL in validation set to finetune and test (replace ${model}).
+
 ***Automatic metric***
+
 Finetune and Testing PAML
 ```console
 ❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
@@ -79,7 +83,9 @@ Finetune and Testing baseline with persona input
 ```console
 ❱❱❱ python main_fine_tune.py --cuda --model trs --batch_size 16 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --persona --save_path save/persona/${model} --save_path_dataset save/persona/ --test
 ```
+
 ***Generation samples***
+
 To check generation of PAML:
 ```console
 ❱❱❱ python generate_samples.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
