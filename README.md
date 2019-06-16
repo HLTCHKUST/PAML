@@ -81,5 +81,6 @@ Finetune and Testing baseline with persona input
 ```
 ***Generation samples***
 To check generation of PAML:
-python generate_samples.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
-
+```console
+❱❱❱ python generate_samples.py --cuda --model trs --batch_size 1 --use_sgd --lr 0.01 --meta_lr 0.0003 --meta_batch_size 16 --meta_optimizer adam --pretrain_emb --weight_sharing --emb_dim 300 --hidden_dim 300 --pointer_gen --save_path save/paml/${model} --save_path_dataset save/paml/ --test
+```
