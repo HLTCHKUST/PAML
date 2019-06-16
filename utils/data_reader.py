@@ -440,6 +440,8 @@ class Personas:
                                                 collate_fn=collate_fn)
         
         return data_loader_tr, data_loader_val
+
+
     def get_data_loader(self,persona,batch_size, split, fold=-1):
         dial_persona = self.type[split][persona]
         if(len(dial_persona)==1 and split == "train"):
@@ -480,6 +482,7 @@ class Personas:
         
         return data_loader_tr, data_loader_val
 
+    
     def get_all_data(self,batch_size):
         tr = []
         val = []
