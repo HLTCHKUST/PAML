@@ -36,7 +36,7 @@ def generate(model, data, persona):
             sent_beam_search = ' '.join([model.vocab.index2word[idx] for idx in new_words])
             print("----------------------------------------------------------------------")
             print("----------------------------------------------------------------------")
-            print("persona")
+            print("persona set")
             print(pp.pformat(persona))
             print("dialogue context:")
             print(pp.pformat(batch['input_txt'][i]))
@@ -69,5 +69,9 @@ for per in tqdm(tasks):
     num_of_dialog = p.get_num_of_dialog(persona=per, split='test')
     for val_dial_index in range(num_of_dialog):
         train_iter, val_iter = p.get_data_loader(persona=per,batch_size=config.batch_size, split='test', fold=val_dial_index)
-        do_learning(model, train_iter, val_iter, iterations=iterations, persona=persona_map[per][0])
+        persona=[]
+        for ppp in persona_map[per]:
+            persona+=ppp
+        persona = list(set(persona))
+        do_learning(model, train_iter, val_iter, iterations=iterations, persona=persona)
         model.load_state_dict({ name: weights_original[name] for name in weights_original })
