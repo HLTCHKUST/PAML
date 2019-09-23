@@ -6,7 +6,7 @@
 This is the PyTorch implementation of the paper:
 **Personalizing Dialogue Agents via Meta-Learning**. Zhaojiang Lin*, Andrea Madotto*, Chien-Sheng Wu, Pascale Fung  ***ACL 2019*** [[PDF]](https://arxiv.org/pdf/1905.10033.pdf)
 
-[**Zhaojiang Lin**](https://github.com/zlinao) and [**Andrea Madotto**](https://andreamad8.github.io/)  contributed equally to this work. 
+[**Zhaojiang Lin**](https://zlinao.github.io/) and [**Andrea Madotto**](https://andreamad8.github.io/)  contributed equally to this work. 
 
 This code has been written using PyTorch >= 0.4.1. If you use any source codes or datasets included in this toolkit in your work, please cite the following paper. The bibtex is listed below:
 <pre>
